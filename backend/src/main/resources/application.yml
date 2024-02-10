@@ -1,0 +1,18 @@
+# Connection to PostgreSQL DB;
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/your_db
+    username: your_user
+    password: your_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        "[format_sql]": true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
