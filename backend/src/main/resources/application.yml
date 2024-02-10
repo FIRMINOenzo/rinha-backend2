@@ -2,9 +2,9 @@
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/your_db
-    username: your_user
-    password: your_password
+    url: jdbc:postgresql://localhost:5432/rinha-backend
+    username: rinha
+    password: backend
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

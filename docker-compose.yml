@@ -1,0 +1,14 @@
+services:
+  db:
+    container_name: postgres_rinha
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=rinha
+      - POSTGRES_PASSWORD=backend
+      - POSTGRES_DB=rinha-backend
+    ports:
+      - "5432:5432"
+    command:
+      ["postgres", "-c", "logging_collector=false", "-c", "max_connections=30"]
+    volumes:
+      - ./initialize.sql:/docker-entrypoint-initdb.d/script.sql
